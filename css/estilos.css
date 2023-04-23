@@ -5,17 +5,31 @@
     box-sizing: border-box;
   }
   
+  @media screen and (max-width: 768px) { /* ajuste o valor '768px' para o ponto de interrupção desejado */
+    h1 {
+      font-size: 24px; /* ajuste o tamanho da fonte para h1 em dispositivos móveis */
+    }
+  
+    h2 {
+      font-size: 20px; /* ajuste o tamanho da fonte para h2 em dispositivos móveis */
+    }
+
+    h3 {
+      font-size: 16px; /* ajuste o tamanho da fonte para h2 em dispositivos móveis */
+    }
+  }
+
   body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #eafee2;
   }
   
   /* Estilos do cabeçalho */
   header {
-    background-color: #333;
+    background-color: #087e0ad3;
     padding: 1rem 0;
   }
   
@@ -48,12 +62,12 @@
     max-width: 960px;
     margin: 2rem auto;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #C5FABA;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
   
   main h1 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     margin-bottom: 1rem;
   }
   
@@ -63,7 +77,7 @@
   
   /* Estilos do rodapé */
   footer {
-    background-color: #333;
+    background-color: #087e0ad3;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -88,7 +102,7 @@
 
   /* Estilos para a tag article */
 article {
-    background-color: #e0e0e0; /* Cor de fundo diferente da seção main */
+    background-color: #fff; /* Cor de fundo diferente da seção main */
     margin: 1.5rem 0;
     padding: 1.5rem;
     border-radius: 5px;
@@ -96,7 +110,7 @@ article {
   }
   
   article h2 {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     margin-bottom: 1rem;
     color: #333;
   }
@@ -121,3 +135,38 @@ article {
     text-decoration: underline;
   }
   
+
+
+
+  .menu-hamburger ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  
+  .menu-hamburger li {
+    padding: 8px 16px;
+  }
+  
+  .menu-hamburger li a {
+    text-decoration: none;
+  }
+  
+  .hamburger-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    padding: 8px 16px;
+  }
+
+
+  @media screen and (min-width: 768px) {
+    .menu-hamburger ul {
+      display: flex;
+    }
+  
+    .hamburger-icon {
+      display: none;
+    }
+  }
