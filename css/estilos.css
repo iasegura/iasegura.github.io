@@ -84,4 +84,40 @@
       margin-bottom: 0;
     }
   }
+
+
+  /* Estilos para a tag article */
+article {
+    background-color: #e0e0e0; /* Cor de fundo diferente da seção main */
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  article h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  article p {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  article a {
+    color: #0091ea;
+    text-decoration: none;
+  }
+  
+  article a:hover {
+    text-decoration: underline;
+  }
   
