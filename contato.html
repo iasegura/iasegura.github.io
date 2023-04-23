@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato - IA Segura</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #contact-form {
+      width: 80%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #0091ea;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0077c0;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>Entre em contato com a organização IA Segura</h1>
+ <form id="contact-form">
+    <div class="form-field">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-field">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-field">
+      <label for="phone">Telefone:</label>
+      <input type="tel" id="phone" name="phone">
+    </div>
+
+    <div class="form-field">
+      <label for="organization">Organização:</label>
+      <input type="text" id="organization" name="organization">
+    </div>
+
+    <div class="form-field">
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+
+    function base64Decode(str) {
+    return decodeURIComponent(atob(str).split('').map(c => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`).join(''));
+    }
+
+
+    document.getElementById('contact-form').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const name = encodeURIComponent(document.getElementById('name').value + "\n\n");
+      const email = encodeURIComponent(document.getElementById('email').value + "\n\n");
+      const phone = encodeURIComponent(document.getElementById('phone').value + "\n\n");
+      const organization = encodeURIComponent(document.getElementById('organization').value + "\n\n");
+      const message = encodeURIComponent(document.getElementById('message').value);
+      const decoded = base64Decode("NjE2NTMwMjU1NzpBQUUxUEFvOEFoZjl1VXk4UDkxR0lHeGV0b2U3RUJJa2ZIaw==");  
+
+      const url = `https://api.telegram.org/bot${decoded}/sendMessage?chat_id=-814590696&text=Nome: ${name}E-mail: ${email}Telefone: ${phone}Organização: ${organization}Mensagem: ${message}`;
+
+      try {
+        const response = await fetch(url, { method: 'GET' });
+        if (response.ok) {
+          alert('Mensagem enviada com sucesso!');
+        } else {
+          alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
+        }
+      } catch (error) {
+        alert('Ocorreu um erro ao enviar a mensagem. Por favor, verifique sua conexão com a internet e tente novamente.');
+      }
+    });
+  </script>
+</body>
+</html>
