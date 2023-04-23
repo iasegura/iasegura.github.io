@@ -37,4 +37,4 @@ Se você está interessado em contribuir para o projeto IA Segura, siga estas et
 
 ## Licença
 
-Este projeto é licenciado sob a Licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes.
+Este projeto é licenciado sob a licença BSD 3 - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes.
