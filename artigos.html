@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artigos - IA Segura</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/artigos.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="artigos.html">Saiba mais</a></li>
+          <li><a href="time.html">Nosso time</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Artigos sobre o tema</h1>
+      <section class="articles-container">
+        <div class="article">
+          <h3>Deep Anomaly Detection with Outlier Exposure</h3>
+          <br />
+
+          <pre>
+Dan Hendrycks
+University of California, Berkeley
+hendrycks@berkeley.edu
+</pre
+          >
+
+          <pre>
+
+Mantas Mazeika
+University of Chicago
+mantas@ttic.edu
+</pre
+          >
+
+          <pre>
+
+Thomas Dietterich
+Oregon State University
+tgd@oregonstate.edu
+    </pre
+          >
+
+          <h4>ABSTRACT</h4>
+          <p>
+            É importante detectar entradas anômalas ao implantar sistemas de
+            aprendizado de máquina. O uso de entradas maiores e mais complexas
+            no aprendizado profundo amplia a dificuldade de distinguir entre
+            exemplos anômalos e dentro da distribuição. Ao mesmo tempo, diversos
+            dados de imagem e texto estão disponíveis em enormes quantidades.
+            Propomos aproveitar esses dados para melhorar a detecção de
+            anomalias profundas, treinando detectores de anomalias em um
+            conjunto de dados auxiliar de outliers, uma abordagem que chamamos
+            de Exposição a Outliers (OE). Isso permite que os detectores de
+            anomalias generalizem e detectem anomalias não vistas. Em
+            experimentos abrangentes em tarefas de processamento de linguagem
+            natural e visão em pequena e grande escala, descobrimos que a
+            Exposição a Outliers melhora significativamente o desempenho da
+            detecção. Também observamos que modelos generativos de ponta
+            treinados no CIFAR-10 podem atribuir probabilidades maiores às
+            imagens SVHN do que às imagens CIFAR-10; usamos OE para mitigar esse
+            problema. Além disso, analisamos a flexibilidade e robustez da
+            Exposição a Outliers e identificamos características do conjunto de
+            dados auxiliar que melhoram o desempenho.
+          </p>
+          <a href="https://arxiv.org/pdf/1812.04606.pdf">PDF</a>
+        </div>
+        <div class="article">
+          <h3>Locating and Editing Factual Associations in GPT</h3>
+          <br />
+
+          <p>Kevin Meng, David Bau, Alex Andonian, Yonatan Belinkov</p>
+
+          <h4>ABSTRACT</h4>
+          <p>
+            Analisamos o armazenamento e a recuperação de associações factuais
+            em modelos de linguagem autoregressiva baseados em transformadores,
+            encontrando evidências de que essas associações correspondem a
+            cálculos localizados e diretamente editáveis. Primeiramente,
+            desenvolvemos uma intervenção causal para identificar as ativações
+            de neurônios que são decisivas nas previsões factuais de um modelo.
+            Isso revela um conjunto distinto de etapas nos módulos de avanço do
+            feed de camadas intermediárias que medeiam as previsões factuais
+            durante o processamento de tokens de sujeito. Para testar nossa
+            hipótese de que esses cálculos correspondem à recuperação de
+            associações factuais, modificamos os pesos de avanço do feed para
+            atualizar associações factuais específicas usando a Edição de Modelo
+            de Posto Um (ROME, na sigla em inglês). Descobrimos que o ROME é
+            eficaz em uma tarefa padrão de edição de modelo de extração de
+            relação zero-shot (zsRE), comparável aos métodos existentes. Para
+            realizar uma avaliação mais sensível, também avaliamos o ROME em um
+            novo conjunto de dados de afirmações contrafactuais, no qual ele
+            simultaneamente mantém especificidade e generalização, enquanto
+            outros métodos sacrificam uma ou outra. Nossos resultados confirmam
+            um papel importante para os módulos de avanço do feed de camadas
+            intermediárias no armazenamento de associações factuais e sugerem
+            que a manipulação direta dos mecanismos computacionais pode ser uma
+            abordagem viável para a edição de modelos. O código, conjunto de
+            dados, visualizações e um caderno de demonstração interativo estão
+            disponíveis <a href="https://rome.baulab.info/">nesta URL</a>
+          </p>
+          <a href="https://arxiv.org/pdf/2202.05262">PDF</a>
+        </div>
+
+        <div class="article">
+          <h3>The Mythos of Model Interpretability</h3>
+          <br />
+
+          <p>Zachary C. Lipton</p>
+
+          <h4>ABSTRACT</h4>
+          <p>Modelos de aprendizado de máquina supervisionados apresentam notáveis capacidades preditivas. Mas você pode confiar no seu modelo? Ele funcionará em implantação? O que mais ele pode dizer sobre o mundo? Queremos que os modelos sejam não apenas bons, mas também interpretáveis. No entanto, a tarefa de interpretação parece subespecificada. Artigos fornecem diversas e, às vezes, motivações não sobrepostas para a interpretabilidade e oferecem inúmeras noções de quais atributos tornam os modelos interpretáveis. Apesar dessa ambiguidade, muitos artigos proclamam interpretabilidade axiomática, sem mais explicações. Neste artigo, buscamos refinar o discurso sobre a interpretabilidade. Primeiramente, examinamos as motivações subjacentes ao interesse em interpretabilidade, constatando que são diversas e ocasionalmente discordantes. Em seguida, abordamos as propriedades e técnicas dos modelos considerados interpretáveis, identificando transparência para humanos e explicações pós-hoc como noções concorrentes. Ao longo do texto, discutimos a viabilidade e a desejabilidade das diferentes noções e questionamos as afirmações frequentemente feitas de que modelos lineares são interpretáveis e que redes neurais profundas não são.</p>
+          <a href="https://arxiv.org/pdf/1606.03490">PDF</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 IA Segura. Precisamos divulgar essa ideia</p>
+    </footer>
+  </body>
+</html>

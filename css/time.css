@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  .team-member {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(80% - 2rem);
+  }
+
+
+  .profile-pic {
+    width: 100px; /* ajuste o tamanho da imagem */
+    height: 100px; /* ajuste o tamanho da imagem */
+    border-radius: 45%; /* cria uma borda circular */
+    object-fit: cover; /* garante que a imagem seja cortada adequadamente */
+    border: 3px solid #fff; /* ajuste a cor e a largura da moldura */
+  }
+
+  .member-info {
+    padding: 1rem 0;
+  }
+
+  .member-info h3 {
+    margin: 0;
+  }
+
+  .member-info p {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .team-member {
+      width: calc(100% - 2rem);
+    }
+  }
