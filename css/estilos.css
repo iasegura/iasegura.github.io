@@ -85,6 +85,14 @@
   
   /* Estilos responsivos */
   @media screen and (max-width: 768px) {
+
+    header {
+      /* background-color: #087e0ad3; */
+     
+     /* Tire essa linha abaixo quando tiver um logo */
+      padding: 0 0;
+    }
+
     nav ul {
       flex-direction: column;
     }
