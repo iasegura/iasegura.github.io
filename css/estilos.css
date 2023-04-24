@@ -86,12 +86,12 @@
   /* Estilos responsivos */
   @media screen and (max-width: 768px) {
 
-    header {
+    /* header { */
       /* background-color: #087e0ad3; */
      
      /* Tire essa linha abaixo quando tiver um logo */
-      padding: 0 0;
-    }
+      /* padding: 0 0; */
+    /* } */
 
     nav ul {
       flex-direction: column;
@@ -168,8 +168,17 @@ article {
     padding: 8px 16px;
   }
 
+  .menu-desktop{
+    display: none;
+  }
+
 
   @media screen and (min-width: 768px) {
+    
+    .menu-mobile{
+      display: none;
+    }
+    
     .menu-hamburger ul {
       display: flex;
     }
@@ -177,4 +186,17 @@ article {
     .hamburger-icon {
       display: none;
     }
+
+    .espacador-menu{
+      display: none;
+    }
+
+    .container-header{
+      display: flex;
+      justify-content: space-between;
+      /* background-color: aqua; */
+    }
+
   }
+
+
